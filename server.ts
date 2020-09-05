@@ -46,5 +46,5 @@ app.get('*', (req, res) => {
 
 // Start up the Node server
 app.listen(PORT, () => {
-  console.log(`Node Express server listening on http://localhost:${PORT}`);
+  console.log(`Spacex Launch Details app started on --> http://localhost:${PORT}`);
 });

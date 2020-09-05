@@ -2,6 +2,7 @@
   "name": "spacex-launch-details",
   "version": "0.0.0",
   "scripts": {
+    "heroku-postbuild":"ng build --prod",
     "ng": "ng",
     "start": "ng serve",
     "build": "ng build",
@@ -12,6 +13,10 @@
     "serve:ssr": "node dist/server",
     "build:ssr": "npm run build:client-and-server-bundles && npm run compile:server",
     "build:client-and-server-bundles": "ng build --prod && ng run SpacexLaunchDetails:server:production"
+  },
+  "engines":{
+    "node":"12.16.1",
+    "npm":"6.13.4"
   },
   "private": true,
   "dependencies": {
