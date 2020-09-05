@@ -48,12 +48,6 @@ export class MainComponent implements OnInit {
     this.missionService.getLaunchDetails(params).subscribe((data) => {
       console.log(data);
       this.missions = data;
-      if (data != undefined && data != null) {
-        data.forEach(element => {
-          this.launchYearSet.add(element.launch_year)
-        });
-      }
-      this.launchYearArr = this.launchYearSet ? Array.from(this.launchYearSet) : [];
     })
   }
 }
