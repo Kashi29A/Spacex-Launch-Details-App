@@ -2,7 +2,6 @@
   "name": "spacex-launch-details",
   "version": "0.0.0",
   "scripts": {
-    "heroku-postbuild":"ng build --prod",
     "ng": "ng",
     "start": "ng serve",
     "build": "ng build",
@@ -13,10 +12,6 @@
     "serve:ssr": "node dist/server",
     "build:ssr": "npm run build:client-and-server-bundles && npm run compile:server",
     "build:client-and-server-bundles": "ng build --prod && ng run SpacexLaunchDetails:server:production"
-  },
-  "engines":{
-    "node":"12.16.1",
-    "npm":"6.13.4"
   },
   "private": true,
   "dependencies": {
@@ -52,14 +47,12 @@
     "grunt-sass": "^3.1.0",
     "jasmine-core": "~2.99.1",
     "jasmine-spec-reporter": "~4.2.1",
-    "jit-grunt": "^0.10.0",
     "karma": "~3.0.0",
     "karma-chrome-launcher": "~2.2.0",
     "karma-coverage-istanbul-reporter": "~2.0.1",
     "karma-jasmine": "~1.1.2",
     "karma-jasmine-html-reporter": "^0.2.2",
     "protractor": "~5.4.0",
-    "time-grunt": "^2.0.0",
     "ts-loader": "^5.4.5",
     "ts-node": "~7.0.0",
     "tslint": "~5.11.0",
