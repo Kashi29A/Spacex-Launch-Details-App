@@ -8,7 +8,7 @@ import {provideModuleMap} from '@nguniversal/module-map-ngfactory-loader';
 
 import * as express from 'express';
 import {join} from 'path';
-
+const path = require('path');
 // Faster server renders w/ Prod mode (dev mode never needed)
 enableProdMode();
 
@@ -42,6 +42,10 @@ app.get('*.*', express.static(DIST_FOLDER, {
 // All regular routes use the Universal engine
 app.get('*', (req, res) => {
   res.render('index', { req });
+});
+
+app.get('/*', function(req,res) {  
+  res.sendFile(path.join(__dirname+'/dist/index.html'));   
 });
 
 // Start up the Node server
