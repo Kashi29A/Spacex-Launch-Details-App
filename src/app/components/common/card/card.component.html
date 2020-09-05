@@ -1,9 +1,9 @@
 
 <div class="card card--round">
   <div class="card__image">
-    <img
+    <img  
       class="card-img-top"
-      [src]="mission?.links?.mission_patch_small"
+      src = "{{mission?.links?.mission_patch_small}}"
       alt="{{mission?.mission_name}}"
       style="width: 100%;"
     />
@@ -13,7 +13,7 @@
       <span>
         <h4
           class="card-title title-text mb-2 font-weight-bold"
-          style="font-size: 16px; white-space: nowrap;"
+          style="font-size: 16px; white-space: nowrap;" 
         >
           {{ mission?.mission_name }} #{{mission?.flight_number}}
         </h4>
