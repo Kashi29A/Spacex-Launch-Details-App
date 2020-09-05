@@ -1,0 +1,35 @@
+.greybg{
+    background-color: gainsboro;
+}
+
+.filters {
+    max-height: fit-content;
+    border-radius: 10px;
+    text-align: center;
+    background-color: #fff;
+    section {
+      padding: 14px 0px;
+    }
+  
+    .filter-item-container {
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      .filter-item {
+        width: 50%;
+        margin: 8px 0;
+        a {
+          background-color: #c7df96;
+          padding: 4px 12px;
+          border-radius: 4px;
+          text-decoration: none;
+          color: #333;
+        }
+      }
+    }
+  }
+  
+  .active {
+    background-color: #7aba01 !important;
+  }
+  

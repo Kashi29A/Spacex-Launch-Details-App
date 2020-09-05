@@ -1,0 +1,61 @@
+
+<div class="card card--round">
+  <div class="card__image">
+    <img
+      class="card-img-top"
+      [src]="mission?.links?.mission_patch_small"
+      alt="{{mission?.mission_name}}"
+      style="width: 100%;"
+    />
+  </div>
+  <div class="card-body">
+    <div class="d-flex">
+      <span>
+        <h4
+          class="card-title title-text mb-2 font-weight-bold"
+          style="font-size: 16px; white-space: nowrap;"
+        >
+          {{ mission?.mission_name }} #{{mission?.flight_number}}
+        </h4>
+
+        <p class="card-title mb-0 font-weight-bold">Mission Ids : </p>
+        <ul class="list">
+          <li *ngFor="let missionId of mission?.mission_id">
+           <p class="blue-content"> {{missionId}}</p>
+          </li>
+          <li *ngIf="mission?.mission_id?.length == 0">
+            <p class="blue-content">NA</p>
+          </li>
+        </ul>
+        <div class="details">
+          <span>
+            <p
+              class="card-text blue-content"
+              style="font-size: 13px;"
+            > 
+              <span class="bold-black-content blue-content">Launch Year : </span>
+              {{mission?.launch_year || 'NA'}}
+            </p>
+          </span>
+          <span>
+            <p
+              class="card-text blue-content"
+              style="font-size: 13px;"
+            >
+              <span class="bold-black-content blue-content">Successful Launch: </span
+              >{{mission?.launch_success? 'Yes': 'No'}}
+            </p>
+          </span>
+          <span>
+            <p
+              class="card-text blue-content"
+            >
+              <span class="bold-black-content">Successful Landing : </span
+              >{{mission?.rocket?.first_stage?.cores[0]?.land_success ? 'Yes': 'No'}}
+            </p>
+          </span>
+        </div>
+      </span>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,104 @@
+<header class="row greybg">
+  <h1 class="col-12 font-weight-bold text-left">SpaceX Launch Programs</h1>
+</header>
+<div *ngIf="!missions" class="col-12 text-center">Loading records...</div>
+<div *ngIf="missions" class="row greybg">
+  <section class="col-12 col-md-4 col-lg-3 mt-2">
+    <div class="filters px-2 py-2">
+      <section class="d-flex align-items-center justify-content-between">
+        <h4 class="font-weight-bold text-left my-0">Filters</h4>
+        
+      </section>
+      <section>
+        <h6>Launch Year</h6>
+        <hr />
+        <div class="filter-item-container">
+          <div class="filter-item" *ngFor="let year of launch_years">
+            <a
+              [routerLink]="[]"
+              routerLinkActive="active"
+              [queryParams]="{limit:100, launch_year: year }"
+              queryParamsHandling="merge"
+              title="{{'filterBy: launch_year:'+ year}}"
+              >{{year}}</a
+            >
+          </div>
+        </div>
+      </section>
+      <section>
+        <h6>Successful Launch</h6>
+        <hr />
+        <div class="filter-item-container">
+          <div class="filter-item">
+            <a
+              [routerLink]="[]"
+              routerLinkActive="active"
+              [queryParams]="{limit:100, launch_success: true }"
+              queryParamsHandling="merge"
+              title="{{'filterBy: launch_success: true'}}"
+              >True</a
+            >
+          </div>
+          <div class="filter-item">
+            <a
+              [routerLink]="[]"
+              routerLinkActive="active"
+              [queryParams]="{limit:100, launch_success: false }"
+              queryParamsHandling="merge"
+              title="{{'filterBy: launch_success: false'}}"
+              >false</a
+            >
+          </div>
+        </div>
+      </section>
+      <section>
+        <h6>Successful Landing</h6>
+        <hr />
+        <div class="filter-item-container">
+          <div class="filter-item">
+            <a
+              [routerLink]="[]"
+              routerLinkActive="active"
+              [queryParams]="{limit:100, land_success: true }"
+              queryParamsHandling="merge"
+              title="{{'filterBy: land_success: true'}}"
+              >True</a
+            >
+          </div>
+          <div class="filter-item">
+            <a
+              [routerLink]="[]"
+              routerLinkActive="active"
+              [queryParams]="{ limit:100, land_success: false }"
+              queryParamsHandling="merge"
+              title="{{'filterBy: land_success: false'}}"
+              >False</a>
+          </div>
+        </div>
+      </section>
+      <button
+          class="btn btn-light mt-2"
+          [routerLink]="[]"
+          [queryParams]="{limit:100}"
+          type="submit"
+        >
+          Clear Filters
+        </button>
+    </div>
+  </section>
+  <section class="col-12 col-md-8 col-lg-9 cards-section">
+    <div class="row">
+      <div
+        *ngFor="let mission of missions"
+        class="col-12 col-md-6 col-lg-3 col-xl-3 px-2 py-2"
+      >
+        <app-card [mission]="mission"></app-card>
+      </div>
+    </div>
+  </section>
+</div>
+<footer class="row mt-2">
+  <h4 class="col-12 text-center">
+    <span class="font-weight-bold">Developed By : </span> Kashinath Arora
+  </h4>
+</footer>
