@@ -12,8 +12,6 @@ import { isPlatformBrowser } from '@angular/common';
 export class MainComponent implements OnInit {
   missions: Mission[];
   mission: Mission;
-  launchYearSet = new Set();
-  launchYearArr = new Array();
   launch_years = [
     2006,
     2007,
