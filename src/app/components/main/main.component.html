@@ -3,10 +3,10 @@
 </header>
 <div *ngIf="!missions" class="col-12 text-center">Loading records...</div>
 <div *ngIf="missions" class="row greybg">
-  <section class="col-12 col-md-4 col-lg-3 mt-2">
-    <div class="filters px-2 py-2">
+  <section style="    padding-right: 8px;" class="col-12 col-md-4 col-lg-3 mt-2">
+    <div class="filters px-10 py-2">
       <section class="d-flex align-items-center justify-content-between">
-        <h4 class="font-weight-bold text-left my-0">Filters</h4>
+        <h4 class="font-weight-bold text-left my-0">&nbsp; Filters</h4>
         
       </section>
       <section>
@@ -86,7 +86,7 @@
         </button>
     </div>
   </section>
-  <section class="col-12 col-md-8 col-lg-9 cards-section">
+  <section style="padding-right: 24px;" class="col-12 col-md-8 col-lg-9 cards-section">
     <div class="row">
       <div
         *ngFor="let mission of missions"
