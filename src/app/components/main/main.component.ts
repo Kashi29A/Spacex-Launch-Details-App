@@ -29,6 +29,7 @@ export class MainComponent implements OnInit {
     2019,
     2020
   ];
+
   constructor( private route: ActivatedRoute,
     @Inject(PLATFORM_ID) private platformId: Object, private missionService: MissionServiceService) { }
   

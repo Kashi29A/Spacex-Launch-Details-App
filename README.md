@@ -2,6 +2,25 @@
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 6.2.1.
 
+App is running live on `https://spacex-launch-details.web.app`
+
+Features implemented: 
+* Implemented server side rendering use command `npm run build:ssr` then `npm run serve:ssr`
+* Filtering of records on the basis of different criteria.
+* Routing to url as per different filters.
+* App is responsive to all the screen sizes (Desktop, Tablet, Mobile).
+* Lighthouse score : 
+    - Desktop - 
+        - Performance - 92%
+        - Accessibility - 93%
+        - Best Practice - 100%
+        - SEO - 80%
+    - Mobile - 
+        - Performance - 88%
+        - Accessibility - 93%
+        - Best Practice - 100%
+        - SEO - 83%
+
 ## Development server
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
